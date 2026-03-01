@@ -14,7 +14,7 @@ export default function BlogPostPage() {
   if (!raw || !meta) {
     return (
       <main className="min-h-screen">
-        <div className="mx-auto max-w-[700px] px-6 py-24 text-center">
+        <div className="mx-auto max-w-[700px] px-4 sm:px-6 py-24 text-center">
           <h1 className="mb-4 font-mono text-2xl font-bold text-textPrimary">
             Post not found
           </h1>
@@ -45,7 +45,7 @@ export default function BlogPostPage() {
 
       <main className="min-h-screen">
         <motion.article
-          className="mx-auto max-w-[700px] px-6 py-16"
+          className="mx-auto max-w-[700px] px-4 sm:px-6 py-16"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"

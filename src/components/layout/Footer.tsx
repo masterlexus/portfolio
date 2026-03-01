@@ -10,7 +10,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border py-8">
-      <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-4 px-4 sm:px-6 sm:flex-row sm:justify-between">
         <p className="text-sm text-textMuted">
           &copy; {new Date().getFullYear()} {profile.name}
         </p>

@@ -97,7 +97,7 @@ export default function Header() {
           'color-mix(in srgb, var(--bg-primary) 80%, transparent)',
       }}
     >
-      <div className="mx-auto flex h-full max-w-[1100px] items-center justify-between px-6">
+      <div className="mx-auto flex h-full max-w-[1100px] items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link to="/" className="font-mono text-xl font-bold text-accent">
           A.I.

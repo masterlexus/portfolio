@@ -16,11 +16,6 @@ export default function Contact() {
       >
         <motion.div variants={fadeInUp}>
           <Terminal title="contact.ts">
-            <p className="text-textMuted">
-              {'> '}
-              <span className="text-textPrimary">alex</span>
-              <span className="text-textMuted">.contact()</span>
-            </p>
             <p className="text-textMuted">{'{'}</p>
             <ContactLine
               label="email"
@@ -44,13 +39,6 @@ export default function Contact() {
           </Terminal>
         </motion.div>
 
-        <motion.p
-          className="mt-6 text-center text-sm text-textSecondary"
-          variants={fadeInUp}
-        >
-          Feel free to reach out — I&apos;m always open to interesting
-          conversations and opportunities.
-        </motion.p>
       </motion.div>
     </Section>
   );

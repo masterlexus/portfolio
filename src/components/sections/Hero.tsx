@@ -23,9 +23,9 @@ export default function Hero() {
       >
         <motion.p
           variants={fadeInUp}
-          className="mb-4 font-mono text-accent"
+          className="mb-4 font-mono text-accent flex gap-1 items-center"
         >
-          {'> hello, world'} <Cursor />
+          {'> hello world'} <Cursor />
         </motion.p>
 
         <motion.h1

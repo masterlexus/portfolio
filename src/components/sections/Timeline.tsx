@@ -9,23 +9,27 @@ import type { Variants } from 'framer-motion';
 import Section from '../layout/Section';
 import Tag from '../ui/Tag';
 import { profile } from '../../data/profile';
-import { fadeInUp } from '../ui/animations';
+import { fadeInUp, prefersReducedMotion } from '../ui/animations';
 
 const cardLeft: Variants = {
-  hidden: { opacity: 0, x: -20 },
+  hidden: prefersReducedMotion ? {} : { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: prefersReducedMotion
+      ? { duration: 0 }
+      : { duration: 0.5, ease: 'easeOut' },
   },
 };
 
 const cardRight: Variants = {
-  hidden: { opacity: 0, x: 20 },
+  hidden: prefersReducedMotion ? {} : { opacity: 0, x: 20 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: prefersReducedMotion
+      ? { duration: 0 }
+      : { duration: 0.5, ease: 'easeOut' },
   },
 };
 

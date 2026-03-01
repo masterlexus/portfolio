@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiDownload } from 'react-icons/fi';
 import { profile } from '../../data/profile';
-import { fadeInUp } from '../ui/animations';
+import { fadeInUp, prefersReducedMotion } from '../ui/animations';
 import Cursor from '../ui/Cursor';
 import Button from '../ui/Button';
 
 const heroStagger = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.15 },
+    transition: { staggerChildren: prefersReducedMotion ? 0 : 0.15 },
   },
 };
 
@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section className="flex min-h-screen items-center">
       <motion.div
-        className="mx-auto max-w-[1100px] px-6"
+        className="mx-auto max-w-[1100px] px-4 sm:px-6"
         variants={heroStagger}
         initial="hidden"
         animate="visible"

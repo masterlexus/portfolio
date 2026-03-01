@@ -8,7 +8,7 @@ const facts = [
   { label: 'Location', value: profile.location },
   { label: 'Education', value: 'EPFL / Imperial College London' },
   { label: 'Languages', value: 'Icelandic 🇮🇸 · English 🇬🇧 · French 🇫🇷' },
-  { label: 'Interests', value: 'Tennis, Reading, Cooking, Karaoke' },
+  { label: 'Interests', value: 'Tennis, Reading, Cooking' },
 ];
 
 export default function About() {

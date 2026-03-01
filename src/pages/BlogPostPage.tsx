@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import BlogPost from '../components/blog/BlogPost';
 import Tag from '../components/ui/Tag';
@@ -36,12 +35,10 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{meta.title} | Alex Orri Ingvarsson</title>
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.excerpt} />
-        <meta property="og:type" content="article" />
-      </Helmet>
+      <title>{meta.title} | Alex Orri Ingvarsson</title>
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.excerpt} />
+      <meta property="og:type" content="article" />
 
       <main className="min-h-screen">
         <motion.article

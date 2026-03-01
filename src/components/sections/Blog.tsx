@@ -11,7 +11,7 @@ export default function Blog() {
     return (
       <Section id="blog" title="blog">
         <p className="text-textSecondary">
-          Coming soon — thoughts on systems, AI, and building things.
+          Something went wrong...
         </p>
       </Section>
     );

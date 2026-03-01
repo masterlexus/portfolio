@@ -209,7 +209,7 @@ function TimelineCard({ entry, expanded, onToggle, align }: TimelineCardProps) {
         className={`mb-2 flex items-center gap-2 ${align === 'right' ? 'flex-row-reverse' : ''}`}
       >
         <span className="font-mono text-xs text-textMuted">
-          {entry.startDate} — {entry.endDate}
+          {entry.startDate} - {entry.endDate}
         </span>
         <span
           className={`rounded-full border px-2 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wider ${typeBadgeStyles[entry.type]}`}

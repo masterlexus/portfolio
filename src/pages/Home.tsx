@@ -9,18 +9,18 @@ import Contact from '../components/sections/Contact';
 export default function Home() {
   return (
     <main>
-      <title>Alex Orri Ingvarsson — Computer Scientist &amp; Developer</title>
+      <title>Alex Orri Ingvarsson - Computer Scientist &amp; Developer</title>
       <meta
         name="description"
-        content="Portfolio of Alex Orri Ingvarsson — computer scientist and developer studying at EPFL and Imperial College London. Projects, blog, and more."
+        content="Portfolio of Alex Orri Ingvarsson - computer scientist and developer studying at EPFL and Imperial College London. Projects, blog, and more."
       />
       <meta
         property="og:title"
-        content="Alex Orri Ingvarsson — Computer Scientist & Developer"
+        content="Alex Orri Ingvarsson - Computer Scientist & Developer"
       />
       <meta
         property="og:description"
-        content="Portfolio of Alex Orri Ingvarsson — computer scientist and developer studying at EPFL and Imperial College London."
+        content="Portfolio of Alex Orri Ingvarsson - computer scientist and developer studying at EPFL and Imperial College London."
       />
       <meta property="og:image" content="/og-image.png" />
       <meta property="og:type" content="website" />

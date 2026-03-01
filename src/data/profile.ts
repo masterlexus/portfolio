@@ -12,15 +12,15 @@ export const profile: Profile = {
     { language: 'French', level: 'Fluent' },
     { language: 'Icelandic', level: 'Native' },
   ],
-  about: `Computer science student at EPFL, currently on exchange at Imperial College London. I've built an AI-powered healthcare triage platform as CTO of a startup, contributed real-time vehicle control software for a racing team, and shipped features used by thousands of businesses as a fullstack developer.\n\nI care about writing clean systems and solving real problems with code — from distributed key-value stores in C to interactive 3D graphics in WebGL. Always looking for the next thing to build.`,
+  about: `Computer science student at EPFL, currently on exchange at Imperial College London. I've built an AI-powered healthcare triage platform as CTO of a startup, contributed real-time vehicle control software for a racing team, and shipped features used by thousands of businesses as a fullstack developer.\n\nI care about writing clean systems and solving real problems with code. I've found myself delving into the world of systems programming and am really passionate about performant systems.`,
 
   timeline: [
     {
       id: 'imperial',
-      year: 2025,
+      year: 2026,
       startDate: 'September 2025',
       endDate: 'June 2026',
-      title: 'Exchange Program — Computing',
+      title: 'Exchange Program - Computing',
       organization: 'Imperial College London',
       location: 'London, United Kingdom',
       type: 'education',
@@ -33,7 +33,7 @@ export const profile: Profile = {
     },
     {
       id: 'epfl-racing',
-      year: 2024,
+      year: 2025,
       startDate: 'September 2024',
       endDate: 'July 2025',
       title: 'Software Engineer',
@@ -53,7 +53,7 @@ export const profile: Profile = {
     },
     {
       id: 'asa-tech',
-      year: 2024,
+      year: 2025,
       startDate: 'July 2024',
       endDate: 'August 2025',
       title: 'CTO',
@@ -90,7 +90,7 @@ export const profile: Profile = {
     },
     {
       id: 'simplybook',
-      year: 2022,
+      year: 2023,
       startDate: 'July 2022',
       endDate: 'August 2023',
       title: 'Fullstack Software Developer',
@@ -162,7 +162,7 @@ export const profile: Profile = {
     {
       id: 'underwater-scene',
       title: 'Underwater Scene',
-      subtitle: 'Computer Graphics — EPFL',
+      subtitle: 'Computer Graphics - EPFL',
       description:
         'Interactive real-time 3D underwater scene using WebGL with custom GLSL vertex and fragment shaders for all visual effects.',
       technologies: ['WebGL', 'GLSL', 'JavaScript'],
@@ -176,7 +176,7 @@ export const profile: Profile = {
     {
       id: 'kv-store',
       title: 'Distributed Key-Value Store',
-      subtitle: 'CS-202 Computer Systems — EPFL',
+      subtitle: 'CS-202 Computer Systems - EPFL',
       description:
         'Distributed hash table system in C implementing Amazon Dynamo architecture with client-server model supporting configurable replication and fault tolerance.',
       technologies: ['C', 'POSIX Threads', 'UDP Networking', 'SHA-1'],
@@ -190,7 +190,7 @@ export const profile: Profile = {
     {
       id: 'medical-imaging',
       title: 'Deep Learning for Medical Imaging',
-      subtitle: 'Introduction to Machine Learning — EPFL',
+      subtitle: 'Introduction to Machine Learning - EPFL',
       description:
         'Implemented and compared multiple neural network architectures for skin lesion classification using the DermaMNIST medical dataset.',
       technologies: ['PyTorch', 'Python', 'NumPy', 'Matplotlib'],
@@ -204,7 +204,7 @@ export const profile: Profile = {
     {
       id: 'chacun',
       title: 'ChaCuN Board Game',
-      subtitle: 'Practice of OOP — EPFL',
+      subtitle: 'OOP Programming - EPFL',
       description:
         'Digital version of Carcassonne-based board game in Java for 2–5 players with complete game logic, graphical interface, and networked multiplayer.',
       technologies: ['Java', 'JavaFX', 'JUnit'],

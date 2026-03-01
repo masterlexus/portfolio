@@ -2,7 +2,7 @@ import type { Profile } from '../types';
 
 export const profile: Profile = {
   name: 'Alex Orri Ingvarsson',
-  tagline: 'Computer Scientist · Fullstack Developer · Builder',
+  tagline: 'Computer Scientist · Fullstack Developer',
   location: 'London, United Kingdom',
   email: 'alexorr.ing@gmail.com',
   linkedin: 'https://linkedin.com/in/alexorri',

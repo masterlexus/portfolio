@@ -1,0 +1,22 @@
+import { Routes, Route } from 'react-router-dom';
+import ScrollProgress from './components/ui/ScrollProgress';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import BlogPostPage from './pages/BlogPostPage';
+
+export default function App() {
+  return (
+    <div className="flex min-h-screen flex-col bg-bgPrimary text-textPrimary">
+      <ScrollProgress />
+      <Header />
+      <div className="flex-1 pt-16">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+  );
+}

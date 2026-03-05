@@ -6,7 +6,7 @@ export const profile: Profile = {
   location: 'London, United Kingdom',
   email: 'alexorr.ing@gmail.com',
   linkedin: 'https://linkedin.com/in/alexorri',
-  github: 'https://github.com/alexorri',
+  github: 'https://github.com/masterlexus',
   languages: [
     { language: 'English', level: 'Fluent' },
     { language: 'French', level: 'Fluent' },

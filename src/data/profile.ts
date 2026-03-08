@@ -202,6 +202,51 @@ export const profile: Profile = {
       ],
     },
     {
+      id: 'climatewise',
+      title: 'ClimateWise',
+      subtitle: 'Software Engineering Group Project - Imperial',
+      description:
+        'Cross-platform app helping UK homeowners understand climate risks, energy performance, and available grants. Features an AI chatbot with MCP integration, secure auth, and Docker Compose deployment.',
+      technologies: [
+        'FastAPI',
+        'React Native',
+        'Expo',
+        'PostgreSQL',
+        'Redis',
+        'Docker',
+        'TypeScript',
+        'Python',
+      ],
+      highlights: [
+        'Built cross-platform app for UK climate risks, energy performance, and government grants.',
+        'Integrated AI chatbot using MCP for structured tool access to climate and energy data.',
+        'Implemented secure authentication with JWT access tokens and OAuth 2.0.',
+        'Deployed full stack with Docker Compose orchestrating all services.',
+      ],
+    },
+    {
+      id: 'neural-rlhf',
+      title: 'Neural RLHF Frontend',
+      subtitle: 'London Neurotech Hackathon',
+      description:
+        'Real-time BCI stimulus presentation and data collection system built in 2 days at the London Neurotech Hackathon. Combines RSVP paradigm with LSL marker sync, multi-stream orchestration, and voice annotation.',
+      technologies: [
+        'Python',
+        'PsychoPy',
+        'FastAPI',
+        'WebSocket',
+        'PyTorch',
+        'LSL',
+        'Whisper',
+      ],
+      highlights: [
+        'Built real-time RSVP stimulus presentation with LSL marker synchronisation.',
+        'Designed multi-process orchestrator managing 4 concurrent LSL streams.',
+        'Created voice annotation pipeline combining VAD with Whisper transcription.',
+        'Shipped ~5,300 lines of production code in 2 days.',
+      ],
+    },
+    {
       id: 'chacun',
       title: 'ChaCuN Board Game',
       subtitle: 'OOP Programming - EPFL',
@@ -235,11 +280,11 @@ export const profile: Profile = {
     },
     {
       name: 'Frontend',
-      skills: ['React', 'React Native', 'JavaFX', 'WebGL', 'Marionette.js'],
+      skills: ['React', 'React Native', 'Expo', 'JavaFX', 'WebGL', 'Marionette.js'],
     },
     {
       name: 'Backend',
-      skills: ['Node.js', 'Express', 'Symfony', 'Zend Framework'],
+      skills: ['Node.js', 'Express', 'FastAPI', 'Symfony', 'Zend Framework'],
     },
     {
       name: 'Machine Learning & AI',
@@ -273,6 +318,8 @@ export const profile: Profile = {
         'GitHub Actions',
         'LabVIEW',
         'Docker',
+        'Redis',
+        'Nginx',
         'JUnit',
         'GDB',
       ],

@@ -4,6 +4,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import BlogPostPage from './pages/BlogPostPage';
+import ProjectPage from './pages/ProjectPage';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
         </Routes>
       </div>
       <Footer />

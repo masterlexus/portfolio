@@ -18,9 +18,8 @@ export default function Button({
   const base =
     'inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-150';
   const variants = {
-    primary: 'bg-btn text-btnText hover:opacity-85',
-    secondary:
-      'border border-border text-textPrimary hover:border-textMuted',
+    primary: 'border border-transparent bg-btn text-btnText hover:opacity-85',
+    secondary: 'border border-border text-textPrimary hover:border-textMuted',
   };
   const isExternal = href.startsWith('http');
   const isFile = href.endsWith('.pdf');

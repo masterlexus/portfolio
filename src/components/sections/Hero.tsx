@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowUpRight, FiDownload } from 'react-icons/fi';
 import {
   profile,
   HEADSHOT_INITIALS,
@@ -109,7 +109,12 @@ export default function Hero() {
               variants={fadeInUp}
               className="mt-8 flex flex-wrap gap-2"
             >
-              <Button href={profile.cv}>Download CV</Button>
+              <Button
+                href={profile.cv}
+                icon={<FiDownload size={14} className="order-last" />}
+              >
+                Download CV
+              </Button>
               <Button
                 href={profile.linkedin}
                 variant="secondary"

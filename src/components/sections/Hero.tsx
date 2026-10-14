@@ -79,7 +79,7 @@ export default function Hero() {
                 <FallbackImage
                   src={profile.headshotSrc}
                   srcSet={HEADSHOT_SRCSET}
-                  sizes="(mi/var/folders/qd/q0yfrs1s2r34w9hw1cwhhp4h0000gn/T/kitty-dropped-files-287E5B41-AC00-4AC7-8DAC-9CF5EE070C51-15564-00000C2B6E2858A3/Screenshot 2026-10-14 at 21.22.30.pngn-width: 768px) 112px, 88px"
+                  sizes="(min-width: 768px) 112px, 88px"
                   width={256}
                   height={256}
                   alt={`Portrait of ${profile.name}`}

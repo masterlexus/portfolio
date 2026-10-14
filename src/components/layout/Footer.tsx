@@ -1,33 +1,42 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { profile } from '../../data/profile';
+import { blogPosts } from '../../data/blog';
 
-const socialLinks = [
-  { href: profile.github, icon: FiGithub, label: 'GitHub' },
-  { href: profile.linkedin, icon: FiLinkedin, label: 'LinkedIn' },
-  { href: `mailto:${profile.email}`, icon: FiMail, label: 'Email' },
-];
+const linkClass = 'text-textMuted transition-colors hover:text-accent';
 
 export default function Footer() {
+  const latestPost = blogPosts[0];
+
   return (
-    <footer className="border-t border-border py-8">
-      <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-4 px-4 sm:px-6 sm:flex-row sm:justify-between">
-        <p className="text-sm text-textMuted">
+    <footer className="border-t border-border">
+      <div className="mx-auto flex max-w-content flex-col gap-3 px-5 py-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p className="text-textMuted">
           &copy; {new Date().getFullYear()} {profile.name}
         </p>
-        <div className="flex gap-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-textMuted transition-colors hover:text-accent"
-              aria-label={link.label}
-            >
-              <link.icon size={18} />
+        <ul className="flex flex-wrap gap-x-5 gap-y-2">
+          <li>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              LinkedIn
             </a>
-          ))}
-        </div>
+          </li>
+          <li>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              GitHub
+            </a>
+          </li>
+          {latestPost && (
+            <li>
+              <Link to={`/blog/${latestPost.slug}`} className={linkClass}>
+                Writing
+              </Link>
+            </li>
+          )}
+          <li>
+            <a href={profile.cv} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              CV
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

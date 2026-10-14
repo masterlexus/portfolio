@@ -1,35 +1,26 @@
 import Hero from '../components/sections/Hero';
+import Experience from '../components/sections/Experience';
+import Work from '../components/sections/Work';
 import About from '../components/sections/About';
-import Timeline from '../components/sections/Timeline';
-import Projects from '../components/sections/Projects';
-import Skills from '../components/sections/Skills';
-import Blog from '../components/sections/Blog';
 import Contact from '../components/sections/Contact';
+
+const title = 'Alex Orri Ingvarsson - Systems Engineer';
+const description =
+  'Alex Orri Ingvarsson, systems engineer working where software meets silicon. MSc Advanced Computing at Imperial College London, BSc Computer Science at EPFL.';
 
 export default function Home() {
   return (
     <main>
-      <title>Alex Orri Ingvarsson - Computer Scientist &amp; Developer</title>
-      <meta
-        name="description"
-        content="Portfolio of Alex Orri Ingvarsson - computer scientist and developer studying at EPFL and Imperial College London. Projects, blog, and more."
-      />
-      <meta
-        property="og:title"
-        content="Alex Orri Ingvarsson - Computer Scientist & Developer"
-      />
-      <meta
-        property="og:description"
-        content="Portfolio of Alex Orri Ingvarsson - computer scientist and developer studying at EPFL and Imperial College London."
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content="/og-image.png" />
       <meta property="og:type" content="website" />
       <Hero />
+      <Experience />
+      <Work />
       <About />
-      <Timeline />
-      <Projects />
-      <Skills />
-      <Blog />
       <Contact />
     </main>
   );

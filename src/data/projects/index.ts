@@ -1,3 +1,4 @@
+import aragoRaw from './arago.md?raw';
 import asaTechRaw from './asa-tech.md?raw';
 import supportAssistantRaw from './support-assistant.md?raw';
 import underwaterSceneRaw from './underwater-scene.md?raw';
@@ -8,6 +9,7 @@ import climatewiseRaw from './climatewise.md?raw';
 import neuralRlhfRaw from './neural-rlhf.md?raw';
 
 const rawProjects: Record<string, string> = {
+  arago: aragoRaw,
   'asa-tech': asaTechRaw,
   'support-assistant': supportAssistantRaw,
   'underwater-scene': underwaterSceneRaw,

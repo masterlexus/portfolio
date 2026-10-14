@@ -1,23 +1,25 @@
 ## Overview
 
-Neural RLHF Frontend is a real-time brain-computer interface (BCI) stimulus presentation and data collection system, built in 2 days at the London Neurotech Hackathon. The system presents rapid serial visual presentation (RSVP) stimuli while synchronising EEG data streams, voice annotations, and temporal markers for downstream reinforcement learning from human feedback.
+Neural RLHF Frontend is a real-time stimulus presentation and data collection system for EEG, built in 2 days at the London Neurotech Hackathon. It shows words one at a time using rapid serial visual presentation (RSVP), records how the participant reacts to each word through EEG and spoken feedback, and lines everything up on a shared clock so the reactions can later be used as a human feedback signal.
 
-## RSVP Stimulus Presentation
+The codebase is about 5,300 lines of modular Python across 5 packages, with no circular dependencies.
 
-The stimulus engine is built with PsychoPy, presenting images in rapid succession at configurable intervals. Each stimulus onset is time-stamped with sub-millisecond precision and pushed as an LSL (Lab Streaming Layer) marker, enabling exact alignment between what the participant sees and the corresponding EEG response.
+## RSVP word display
 
-## Multi-Stream LSL Orchestrator
+Each word onset is pushed as a Lab Streaming Layer (LSL) marker with millisecond precision, so EEG epochs can be locked to exactly what the participant saw. There are two display backends: OpenGL through PsychoPy (vsync-locked) and a browser backend using requestAnimationFrame. Both time stimuli by counting frames rather than reading a clock, which keeps onsets aligned with the actual screen refresh.
 
-A multi-process orchestrator manages 4 concurrent LSL streams simultaneously: EEG data, stimulus markers, voice annotations, and system events. Each stream runs in its own process to avoid blocking, with the orchestrator handling synchronisation, buffering, and graceful shutdown across all streams.
+## Multi-stream orchestrator
 
-## Voice Annotation Pipeline
+A multi-process orchestrator synchronises 4 independent LSL streams (RSVP, voice, vision and EEG) through LSL's global clock, with marker collection running on daemon threads so no stream blocks another.
 
-Participants can provide spoken feedback on stimuli in real time. The pipeline uses voice activity detection (VAD) to segment speech from silence, then feeds detected segments to OpenAI's Whisper model for transcription. Transcribed annotations are timestamped and aligned with the corresponding stimulus markers.
+## Voice annotation
 
-## EEG Integration
+Participants can react out loud. Silero VAD detects speech onset, faster-whisper (tiny.en, int8) transcribes the segment, and a keyword-based classifier assigns a sentiment. Every annotation carries an LSL timestamp.
 
-The system interfaces with EEG hardware through LSL, receiving raw neural data streams. Markers from the stimulus presentation are embedded in the EEG recording, allowing post-hoc analysis of event-related potentials (ERPs) and other neural responses tied to specific visual stimuli.
+## EEG emotion prediction
 
-## Temporal Analysis
+EEG from BCICore8 hardware is processed in a subprocess with real-time feature extraction, and sklearn models predict valence and arousal.
 
-All data streams share a common time base through LSL's clock synchronisation. This enables cross-modal analysis linking neural responses, stimulus timing, and participant feedback into a unified dataset suitable for training RLHF reward models.
+## Analysis and interface
+
+A 6-phase temporal analysis pipeline associates verbal feedback and EEG emotion predictions with individual words using the LSL timestamps. A single FastAPI and WebSocket server drives a phase-based state machine, so the RSVP display and the feedback review run in one browser tab without page reloads.

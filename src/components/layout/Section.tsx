@@ -1,20 +1,23 @@
 import type { ReactNode } from 'react';
+import Reveal from '../ui/Reveal';
 
 interface SectionProps {
   id: string;
-  title: string;
+  label: string;
   children: ReactNode;
+  className?: string;
 }
 
-export default function Section({ id, title, children }: SectionProps) {
+export default function Section({ id, label, children, className = '' }: SectionProps) {
   return (
-    <section id={id} className="py-16 md:py-24">
-      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
-        <h2 className="mb-12 font-mono text-2xl font-bold tracking-tight md:text-3xl">
-          <span className="text-accent">$ </span>
-          <span className="text-textPrimary">{title}</span>
-        </h2>
-        {children}
+    <section id={id} className={`py-14 md:py-20 ${className}`}>
+      <div className="mx-auto max-w-content px-5 sm:px-6">
+        <Reveal>
+          <h2 className="mb-6 text-xs font-medium uppercase tracking-[0.08em] text-textMuted md:mb-8">
+            {label}
+          </h2>
+          {children}
+        </Reveal>
       </div>
     </section>
   );

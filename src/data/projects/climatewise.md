@@ -12,7 +12,7 @@ The backend is built with FastAPI (Python), backed by PostgreSQL for persistent 
 
 ## AI Chatbot with MCP
 
-The app features an AI-powered chatbot that uses the Model Context Protocol (MCP) to provide structured tool access. Rather than relying on unstructured prompts, the chatbot can query climate risk data, look up EPC ratings, and search grant eligibility through well-defined tool interfaces. This gives users conversational access to all of the app's data sources.
+The app features an AI chatbot built on Mistral, with streamed responses (SSE) and the Model Context Protocol (MCP) for structured tool access. Rather than relying on unstructured prompts, the chatbot can query climate risk data, look up EPC ratings, and search grant eligibility through well-defined tool interfaces. This gives users conversational access to all of the app's data sources.
 
 ## Authentication
 
@@ -24,4 +24,4 @@ Users can search for their property's Energy Performance Certificate (EPC) ratin
 
 ## Deployment
 
-The entire stack is orchestrated with Docker Compose, with separate containers for the FastAPI backend, PostgreSQL database, and Redis cache. This setup enables consistent local development environments and straightforward deployment to production.
+The entire stack is orchestrated with Docker Compose, with separate containers for the FastAPI backend, PostgreSQL database, and Redis cache, behind an Nginx reverse proxy with SSL/TLS. A GitLab CI pipeline builds and deploys the services, including Android Play Store builds.
